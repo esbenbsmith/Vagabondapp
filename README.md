@@ -1,3 +1,0 @@
-# Vagabondapp
-Vagabond practice project
-
