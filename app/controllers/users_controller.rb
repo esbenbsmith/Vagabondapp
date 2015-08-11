@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
+  before_filter :authorize, only: [:show]
+
   def new
-    @user = User.new
+    if current_user
+      redirect_to profile_path
+    else
+      @user = User.new
+    end
   end
 
   def create
@@ -11,6 +17,17 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to profile_path
       else
+        errors = @user.errors
+        error_string = ""
+        if errors[:email]
+          error_string += "Email: #{errors[:email]}  "
+        end
+        if errors[:password]
+          error_string += "Password: #{errors[:password]}"
+        end
+
+        flash[:error] = error_string
+
         redirect_to signup_path
       end
     end
@@ -28,7 +45,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
 end
