@@ -11,15 +11,15 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     render :new
+
   end
 
   # creates new post in db
   # that BELONGS TO current_user
   def create
-    # post = post.create(post_params)
-    # current_user.posts << post
     post = current_user.posts.create(post_params)
     redirect_to post_path(post)
+
   end
 
   def show
