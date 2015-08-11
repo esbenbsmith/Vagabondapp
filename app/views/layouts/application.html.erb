@@ -30,16 +30,30 @@
 	    	</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
 	    		<ul class="nav navbar-nav navbar-right">
-	    			<li><a href="/signup">Sign up</a></li>
-	    			<li><a href="/login">Log in</a></li>
-	    			<li><a href="/logout">Log out</a></li>
+	    			<!-- buttons to show if no user -->
+	    			<% if current_user %>
+	    				
+	    				<!-- button if user logs in -->
+	    				<li display: "inline"><a href="/logout">Log out</a></li>
+	    			<% else %>
+		    			<li display: "inline"><a href="/signup">Sign up</a></li>
+		    			<li display: "inline"><a href="/login">Log in</a></li>
+		    			
+		    		<% end %>
+	    			
 	    		</ul>
 	    	</div>
 		</div>
 	</nav> 
 	<!-- end of navbar -->
 
-<%= yield %>
+	<div class="container text-center">
+		<% flash.each do |name, msg| %>
+		    <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>
+		<% end %>
+	</div>
+
+	<%= yield %>
 
 </body>
 </html>
