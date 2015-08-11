@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authorize, except: [:index, :show]
+  
 
   # show ALL posts in db
   def index
