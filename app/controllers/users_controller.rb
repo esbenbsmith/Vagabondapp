@@ -4,15 +4,20 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
+    if current_user
       redirect_to profile_path
     else
-      redirect_to signup_path
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to profile_path
+      else
+        redirect_to signup_path
+      end
     end
   end
 
   def show
+    render :show
   end
 
   def edit
