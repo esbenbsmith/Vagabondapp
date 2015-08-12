@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
   resources :users, only: [:create, :edit, :update]
 
-  #login
+  #SESSIONS
   get '/login', to: 'sessions#new'
-  post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  resources :sessions, only: [:create]
 
   #POSTS
   resources :posts
@@ -30,8 +30,8 @@ end
 #      user PATCH  /users/:id(.:format)      users#update
 #           PUT    /users/:id(.:format)      users#update
 #     login GET    /login(.:format)          sessions#new
-#  sessions POST   /sessions(.:format)       sessions#create
 #    logout GET    /logout(.:format)         sessions#destroy
+#  sessions POST   /sessions(.:format)       sessions#create
 #     posts GET    /posts(.:format)          posts#index
 #           POST   /posts(.:format)          posts#create
 #  new_post GET    /posts/new(.:format)      posts#new
@@ -40,3 +40,4 @@ end
 #           PATCH  /posts/:id(.:format)      posts#update
 #           PUT    /posts/:id(.:format)      posts#update
 #           DELETE /posts/:id(.:format)      posts#destroy
+
