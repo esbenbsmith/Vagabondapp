@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # show ALL posts in db
   def index
-    @posts = Post.all
+    @posts = Post.all  
     render :index
   end
 
@@ -11,19 +11,23 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     render :new
+
   end
 
   # creates new post in db
   # that BELONGS TO current_user
   def create
-    # post = post.create(post_params)
-    # current_user.posts << post
     post = current_user.posts.create(post_params)
     redirect_to post_path(post)
+
   end
 
   def show
     @post = Post.find(params[:id])
+    @user_name = @post.user.name
+    @cities = City.all.by_name
+    
+
     render :show
   end
 
@@ -69,7 +73,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :user_id)
     end
 
 end

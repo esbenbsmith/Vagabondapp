@@ -3,10 +3,13 @@
 		<h1>New Post</h1>
 		<%= form_for @post do |f| %>
 			<%= f.text_field :title, placeholder: "Title", class: "form-control" %>
-			
+			<br>
+			<%= f.collection_select :city_id, @cities, :id,:name, include_blank: true %>
+
 			<br>
 			<%= f.text_field :body, placeholder: "Body", class: "form-control" %> 
 			<br>
+
 			
 			<%= f.submit "Submit" %>
 		<% end %>

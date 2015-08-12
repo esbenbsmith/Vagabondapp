@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+
     <h1>All Posts</h1>
     <hr>
     <% if @posts.any? %>
@@ -20,6 +21,10 @@
 
     <% if current_user %>
       <%= link_to "Submit New Post", new_post_path, class: "btn btn-default" %>
+
+    
+  
+
     <% end %>
   </div>
 </div>
