@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # show ALL posts in db
   def index
-    @posts = Post.all
+    @posts = Post.all  
     render :index
   end
 
@@ -24,6 +24,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user_name = @post.user.name
+    @cities = City.all.by_name
+    
+
     render :show
   end
 
