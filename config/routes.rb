@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   #root page CITIES
   root 'cities#index'
 
+  resources :cities, only: [:show]
+
   #USERS
   #signup form
   get '/signup', to: 'users#new'
