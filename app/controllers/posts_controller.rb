@@ -25,6 +25,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user_name = @post.user.name
+    @cities = City.all.by_name
+    
 
     render :show
   end
