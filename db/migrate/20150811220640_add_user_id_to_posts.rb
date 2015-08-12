@@ -1,9 +1,9 @@
 class AddUserIdToPosts < ActiveRecord::Migration
   def change
 
-  	change_table :pets do |t|
+  	change_table :posts do |t|
     
-    	t.references :owner 
+    	t.references :user
   	end
   end
 end
