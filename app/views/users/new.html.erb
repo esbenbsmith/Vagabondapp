@@ -1,16 +1,24 @@
 
 <div class="row">
 	<div class="col-sm-4 col-sm-offset-4">
+		
+
 		<h1>Sign Up</h1>
+
 		<%= form_for @user do |f| %>
-			<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+			<%= f.text_field :name, placeholder: "Name", class: "form-control", autofocus: true %>
 			<br>
 			<%= f.email_field :email, placeholder: "Email", class: "form-control" %>
 			<br>
-			<%= f.password_field :password, placeholder: "Password", class: "form-control" %> 
+			<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+			<br>
+			<%= f.password_field :password_confirmation, placeholder: "Confirm password", class: "form-control" %> 
 			<br>
 			
 			<%= f.submit "Sign Up" %>
 		<% end %>
+
+		<br>
+		<p>Already have an account? <%= link_to "Click here", login_path%> to log in.</p>
 	</div>
 </div>
