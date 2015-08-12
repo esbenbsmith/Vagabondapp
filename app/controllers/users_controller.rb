@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authorize, only: [:show]
+  before_filter :authorize, only: [:edit, :update]
 
   def new
     if current_user
@@ -34,13 +34,21 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     render :show
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to profile_path(@user)
+    else
+      render :edit
+    end
   end
 
   private
