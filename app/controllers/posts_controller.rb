@@ -24,10 +24,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @user_name = @post.user.name
-    
-    
-
     render :show
   end
 
@@ -73,7 +69,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :body, :user_id)
+      params.require(:post).permit(:title, :body, :user_id, :city_id)
     end
 
 end
