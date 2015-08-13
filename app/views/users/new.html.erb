@@ -8,6 +8,25 @@
 		<%= form_for @user do |f| %>
 			<%= f.text_field :name, placeholder: "Name", class: "form-control", autofocus: true %>
 			<br>
+			<%= f.select :city_id, options_for_select(
+				[
+					["San Francisco", 1],
+					["New York", 2],
+					["Los Angeles", 3],
+					["Miami", 4],
+					["Seattle", 5],
+					["Las Vegas", 6],
+					["Berlin", 7],
+					["Hong Kong", 8],
+					["Tokyo", 9],
+					["Sydney", 10],
+					["Ho Chi Minh City", 11],
+					["Seoul", 12]
+				]
+			), {}, class: "form-control col-sm-4" %>
+			<br>
+			<br>
+			<br>
 			<%= f.email_field :email, placeholder: "Email", class: "form-control" %>
 			<br>
 			<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
