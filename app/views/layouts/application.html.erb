@@ -32,14 +32,14 @@
 	    		<ul class="nav navbar-nav navbar-right">
 	    			<% if current_user %>
 	    			<!-- button if user logs in -->
-	    				<li display: "inline"><a href="/posts/new">New Post</a></li>
-	    				<li display: "inline"><a href="/profile">Profile</a></li>
-	    				<li display: "inline"><a href="/logout">Log out</a></li>
+	    				<li><a href="/posts/new">New Post</a></li>
+	    				<li><a href="/profile">Profile</a></li>
+	    				<li><a href="/logout">Log out</a></li>
 	    				
 	    			<% else %>
 	    				<!-- buttons to show if no user -->
-		    			<li display: "inline"><a href="/signup">Sign up</a></li>
-		    			<li display: "inline"><a href="/login">Log in</a></li>
+		    			<li><a href="/signup">Sign up</a></li>
+		    			<li><a href="/login">Log in</a></li>
 		    		<% end %>	
 	    		</ul>
 	    	</div>

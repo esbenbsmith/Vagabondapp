@@ -38,8 +38,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
-    render :show
+    if params[:id].present?
+      @user = User.find(params[:id])
+    else
+      @user = User.find(session[:user_id])
+    end
   end
 
   def edit
