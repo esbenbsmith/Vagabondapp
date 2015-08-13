@@ -2,8 +2,6 @@
 	<div class="col-sm-4 col-sm-offset-4">
 		<h1>New Post</h1>
 		<%= form_for @post, :html => {:class => "form-horizontal center"} do |f| %>
-			<%= f.text_field :title, placeholder: "Title", class: "form-control" %>
-			<br>
 			<%= f.select :city_id, options_for_select(
 				[
 					["San Francisco", 1],
@@ -23,9 +21,11 @@
 			<br>
 			<br>
 			<br>
-			<%= f.text_field :body, placeholder: "Body", class: "form-control" %> 
+			<%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+			<br>
+			<%= f.text_area :body, placeholder: "Body", class: "form-control" %> 
 			<br>	
-			<%= f.submit "Submit", class: "btn btn-primary" %>
+			<%= f.submit "Submit", class: "btn btn-success" %>
 		<% end %>
 	</div>
 </div>
