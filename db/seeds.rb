@@ -1,7 +1,7 @@
 City.create(name: 'San Francisco', state: 'CA', country: 'USA', lat: '37.774929', long: '-122.419416', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/sanfrancisco.jpg')
 City.create(name: 'New York', state: 'NY', country: 'USA', lat: '43.299428', long: '-74.217933', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/newyork.jpg')
 City.create(name: 'Los Angeles', state: 'CA', country: 'USA', lat: '34.052234', long: '118.243685', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/losangeles.jpg')
-City.create(name: 'Miami', state: 'FL', country: 'USA', lat: '49.369597', long: '-98.239013', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/miami.jpg')
+City.create(name: 'Miami', state: 'FL', country: 'USA', lat: '49.369597', long: '-98.239013', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/miami2.jpg')
 City.create(name: 'Seattle', state: 'WA', country: 'USA', lat: '47.606209', long: '-122.332071', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/seattle.jpg')
 City.create(name: 'Las Vegas', state: 'NV', country: 'USA', lat: '36.169941', long: '-115.139830', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/lasvegas.jpg')
 City.create(name: 'Berlin', state: '', country: 'Germany', lat: '52.520007', long: '13.404954', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/berlin.jpg')
