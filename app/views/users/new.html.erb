@@ -5,7 +5,8 @@
 
 		<h1>Sign Up</h1>
 
-		<%= form_for @user do |f| %>
+		<%= form_for @user, :html => { :multipart => true } do |f| %>
+
 			<%= f.text_field :name, placeholder: "Name", class: "form-control", autofocus: true %>
 			<br>
 			<%= f.select :city_id, options_for_select(
@@ -32,6 +33,9 @@
 			<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
 			<br>
 			<%= f.password_field :password_confirmation, placeholder: "Confirm password", class: "form-control" %> 
+			<br>
+
+ 			<%= f.file_field :avatar, class: "form-control" %>
 			<br>
 			
 			<%= f.submit "Sign Up" %>
