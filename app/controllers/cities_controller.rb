@@ -5,6 +5,7 @@ class CitiesController < ApplicationController
   end
 
   def show
+    @cities = City.all
   	@city = City.find(params[:id])
     render :show
     
