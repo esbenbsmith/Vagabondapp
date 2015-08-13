@@ -27,8 +27,20 @@ body {
     text-shadow: black 0.3em 0.3em 0.3em;
 }
 
-
 #map {
     width: 100%;
     height: 500px;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+}
+
+#header1 {
+    letter-spacing: 2.5px;
+    font-size: 24px;
+    margin-bottom: 0px;
+    color: black;
+    text-shadow: 1px 1px 1px #aaa;
 }
