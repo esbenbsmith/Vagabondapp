@@ -1,17 +1,26 @@
+<div class="well col-sm-2 hidden-xs" id="city-list">
+  <ul class="nav nav-pills nav-stacked">
+    <% @cities.each do |city| %>
+      <li>                
+        <%= link_to city.name, city_path(city) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
 <div class="jumbotron" style="background-image: url('<%= @city.img_url %>');">
   <h1><center><%= @city.name %></center></h1>
 </div>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <% @city.posts.each do |post| %>
-    	<h1><%= post.title %></h1>
-    	<p><%= post.body %></p>
-    	<span class="pull-right">
-              <%= link_to "View Post", post_path(post), class: "btn btn-default pull-right" %>
-            </span>
-    	<br>
-    	<br>
-    	<hr>
-    	<% end  %>
-  </div>
+
+<div class="container col-sm-10">
+  <% @city.posts.each do |post| %>
+  	<h1><%= post.title %></h1>
+  	<p><%= post.body %></p>
+  	<span class="pull-right">
+            <%= link_to "View Post", post_path(post), class: "btn btn-default pull-right" %>
+          </span>
+  	<br>
+  	<br>
+  	<hr>
+  <% end  %>
 </div>
