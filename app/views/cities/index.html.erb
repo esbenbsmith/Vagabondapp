@@ -7,12 +7,17 @@
     <% end %>
 	</ul>
 </div>
-<div class="container col-sm-10">
+<div class="container col-sm-10" id="main">
   <br>
-	<p>Welcome to Vagabond!</p>
-	
+
+    <center>
+  	 <p id="header1">Welcome to Vagabond! <small>Choose your destination.</small></p>
+    </center>
+
 	<div id="map"></div>
+</div>
 	
+<div class="container col-sm-12">
   <h1>Postfeed</h1>
 	<% if @posts.any? %>
         <% @posts.each do |post| %>
@@ -27,7 +32,5 @@
       <% else %>
           <h3>No posts yet!</h3>
           <hr>
-      <% end %> 
+      <% end %>
 </div>
-
-
