@@ -4,6 +4,17 @@
 </div>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <h1><%= @posts %></h1>
+    <% @city.posts.each do |post| %>
+    	<h1><%= post.title %></h1>
+    	<p><%= post.body %></p>
+    	<span class="pull-right">
+              <%= link_to "View Post", post_path(post), class: "btn btn-default pull-right" %>
+            </span>
+    	<br>
+    	<br>
+    	<hr>
+
+    	<% end  %>
+    
   </div>
 </div>

@@ -8,11 +8,12 @@
 	</ul>
 </div>
 <div class="container col-sm-10">
-	<h1>Vagabond</h1>
+  <br>
 	<p>Welcome to Vagabond!</p>
-	<hr>
-	<h1>Map Placeholder</h1>
-	<hr>
+	
+	<div id="map"></div>
+	
+  <h1>Postfeed</h1>
 	<% if @posts.any? %>
         <% @posts.each do |post| %>
             <h3><%= post.title %></h3>
