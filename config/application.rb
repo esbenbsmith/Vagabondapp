@@ -16,7 +16,10 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 module VagabondApp
-  class Application < Rails::Application
+  class Application < Rails::
+    # the new line added for autoload of lib
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
