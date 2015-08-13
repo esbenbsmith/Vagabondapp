@@ -16,7 +16,7 @@ map.addMarker({
       ;
     },
     infoWindow: {
-      content: 'San Francisco, CA, USA'
+      content: '<a href="/cities/1">San Francisco, CA, USA</a>'
     
     }
     });
@@ -27,7 +27,7 @@ map.addMarker({
     title: 'New York',
     icon: '',
     infoWindow: {
-      content: 'New York, NY, USA'
+      content: '<a href="/cities/2">New York, NY, USA</a>'
     
     }
     });
@@ -38,7 +38,7 @@ map.addMarker({
     title: 'Los Angeles',
     icon: '',
     infoWindow: {
-      content: 'Los Angeles, CA, USA'
+      content: '<a href="/cities/3">Los Angeles, CA, USA</a>'
     
     }
     });
@@ -49,7 +49,7 @@ map.addMarker({
     title: 'Miami',
     icon: '',
     infoWindow: {
-      content: 'Miami, FL, USA'
+      content: '<a href="/cities/4">Miami, FL, USA</a>'
     
     }
     });
@@ -60,7 +60,7 @@ map.addMarker({
     title: 'Seattle',
     icon: '',
     infoWindow: {
-      content: 'Seattle, WA, USA'
+      content: '<a href="/cities/5">Seattle, WA, USA</a>'
     
     }
     });
@@ -71,7 +71,7 @@ map.addMarker({
     title: 'Las Vegas',
     icon: '',
     infoWindow: {
-      content: 'Las Vegas, NV, USA'
+      content: '<a href="/cities/6">Las Vegas, NV, USA</a>'
     
     }
     });
@@ -82,7 +82,7 @@ map.addMarker({
     title: 'Berlin',
     icon: '',
     infoWindow: {
-      content: 'Berlin, Germany'
+      content: '<a href="/cities/7">Berlin, Germany</a>'
     
     }
     });
@@ -93,7 +93,7 @@ map.addMarker({
     title: 'Hong Kong',
     icon: '',
     infoWindow: {
-      content: 'Hong Kong, China'
+      content: '<a href="/cities/8">Hong Kong, China</a>'
     
     }
     });
@@ -104,7 +104,7 @@ map.addMarker({
     title: 'Tokyo',
     icon: '',
     infoWindow: {
-      content: 'Tokyo, Japan'
+      content: '<a href="/cities/9">Tokyo, Japan</a>'
     
     }
     });
@@ -115,7 +115,7 @@ map.addMarker({
     title: 'Sydney',
     icon: '',
     infoWindow: {
-      content: 'Sydney, NSW, Australia'
+      content: '<a href="/cities/10">Sydney, NSW, Australia</a>'
     
     }
     });
@@ -126,7 +126,7 @@ map.addMarker({
     title: 'Ho Chi Minh City',
     icon: '',
     infoWindow: {
-      content: 'Ho Chi Minh City, Vietnam'
+      content: '<a href="/cities/11">Ho Chi Minh City, Vietnam</a>'
     
     }
     });
@@ -137,7 +137,7 @@ map.addMarker({
     title: 'Seoul',
     icon: '',
     infoWindow: {
-      content: 'Seoul, South Korea'
+      content: '<a href="/cities/12">Seoul, South Korea</a>'
     
     }
     });
