@@ -5,7 +5,7 @@ $(document).ready(function(){
     lng: 20,
     zoom: 2,
     panControl: false,
-    zoomControl: false,
+    zoomControl: true,
     mapTypeControl: true,
     scaleControl: false,
     streetViewControl: false,
