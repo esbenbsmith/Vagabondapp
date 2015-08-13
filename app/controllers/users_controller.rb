@@ -47,17 +47,19 @@ class UsersController < ApplicationController
   end
 
   def update
+
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       redirect_to profile_path(@user)
     else
-      render :edit
+      flash[:notice] = @user.errors
+      redirect_to :back
     end
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :city_id, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :city_id, :email, :password, :password_confirmation, :avatar)
     end
 
 end
