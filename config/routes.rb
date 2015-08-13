@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   #profile page
   get '/profile', to: 'users#show'
-  resources :users, only: [:create, :edit, :update]
+  resources :users, only: [:create, :edit, :update, :show]
 
   #SESSIONS
   get '/login', to: 'sessions#new'
