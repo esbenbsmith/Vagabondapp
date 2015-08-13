@@ -1,25 +1,33 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
-
-			<h1>Profile</h1>
+		<div class="well col-md-4">
+			<legend>Profile</legend>
 			<h2><%= @user.name %></h2>
-			<h3>City Placeholder</h3>
-			<h3><%= @user.created_at %></h3>
+			<h3><%= @user.city.name %></h3>
+			<h3>Joined on: <%= @user.created_at.strftime("%m/%d/%Y") %></h3>
 			<%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-primary" %>
-
 		</div>
-		<div class="col-md-8">
-			<div class="row">
-				<h3>City Placeholder</h3>
-				<h3>Post Title Placeholder</h3>
-				<h4>Bacon ipsum dolor amet cupidatat ham beef ipsum sed consequat. Deserunt adipisicing andouille fugiat qui. Aliqua shankle excepteur, ea capicola ham shank andouille alcatra laboris et kevin turducken reprehenderit sint. Tri-tip dolore sunt nostrud doner voluptate anim, reprehenderit proident. Meatloaf landjaeger aliqua, pariatur frankfurter id reprehenderit mollit capicola rump ham hock qui labore dolore.</h4>
-			</div>
-			<div class="row">
-				<h3>City Placeholder</h3>
-				<h3>Post Title Placeholder</h3>
-				<h4>Banh mi beard messenger bag, pug American Apparel whatever scenester McSweeney's selfies 90's chia farm-to-table bitters single-origin coffee. Cardigan Wes Anderson artisan crucifix DIY, Pitchfork banh mi you probably haven't heard of them asymmetrical organic tote bag Intelligentsia authentic slow-carb American Apparel. Paleo pickled slow-carb you probably haven't heard of them, bespoke Brooklyn ugh raw denim vinyl fashion axe skateboard yr mumblecore normcore Truffaut. Fingerstache lo-fi kitsch normcore, scenester Carles tousled Kickstarter.</h4>
-			</div>
+		<div class="log col-md-8">
+			<% if @user.posts.any? %>
+				<div class="row">
+				<h2>My Posts</h2>
+				<hr>
+				<% @user.posts.each do |post| %>
+					<h3><%= post.title %></h3>
+            		<h4><%= post.city.name%>   
+	                	<span class="pull-right">
+	                  		<%= link_to "View Post", post_path(post), class: "btn btn-primary pull-right" %>
+	                	</span>
+                	</h4> 
+              		<hr>
+              	<% end %>
+              	</div>
+			<% else %>
+			    <div class="row">
+			    <h3>No posts yet!</h3>
+			    <hr>
+			    </div>
+			<% end %>
 		</div>
 	</div>
 </div>
