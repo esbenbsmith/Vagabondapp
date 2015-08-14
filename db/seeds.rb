@@ -15,134 +15,134 @@ User.create(name: 'Alesben Esbenanda', email: 'alesben@gmail.com', password: 'pa
 
 User.create(name: 'John Smith', email: 'john@gmail.com', password: 'password', password_confirmation: 'password', created_at: '2015-08-13 00:30:40.053344', updated_at: '', city_id: 2, avatar_file_name: 'Clean-dog-150x150.jpg', avatar_content_type: 'image/jpeg', avatar_file_size: 6147, avatar_updated_at: '2015-08-14 00:42:37')
 
-# 5.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(50),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 1
-# )
-# end
+5.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(50).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 1
+)
+end
 
-# 4.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(60),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 2
-# )
-# end
+4.times do
+  Post.create(
+  title: FFaker::BaconIpsum.words(3).join(' '),
+  body: FFaker::BaconIpsum.words(60).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 2
+)
+end
 
-# 6.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(58),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 3
-# )
-# end
+6.times do
+  Post.create(
+  title: FFaker::HipsterIpsum.words(3).join(' '),
+  body: FFaker::HipsterIpsum.words(58).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 3
+)
+end
 
-# 3.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(49),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 4
-# )
-# end
+3.times do
+  Post.create(
+  title: FFaker::DizzleIpsum.words(3).join(' '),
+  body: FFaker::DizzleIpsum.words(49).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 4
+)
+end
 
-# 5.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(32),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 5
-# )
-# end
+5.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(32).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 5
+)
+end
 
-# 5.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(75),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 6
-# )
-# end
+5.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(75).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 6
+)
+end
 
-# 6.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(76),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 7
-# )
-# end
+6.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(76).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 7
+)
+end
 
-# 5.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(64),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 8
-# )
-# end
+5.times do
+  Post.create(
+  title: FFaker::HipsterIpsum.words(3).join(' '),
+  body: FFaker::HipsterIpsum.words(64).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 8
+)
+end
 
-# 4.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(50),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 9
-# )
-# end
+4.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(50).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 9
+)
+end
 
-# 4.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(43),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 10
-# )
-# end
+4.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(43).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 10
+)
+end
 
-# 5.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(53),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 11
-# )
-# end
+5.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(53).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 11
+)
+end
 
-# 6.times do
-#   Post.create(
-#   title: FFaker::Lorem.words(3),
-#   body: FFaker::Lorem.words(40),
-#   created_at: FFaker::Date.between(2.days.ago, Date.today),
-#   updated_at: '',
-#   user_id: rand(1..2),
-#   city_id: 12
-# )
-# end
+6.times do
+  Post.create(
+  title: FFaker::Lorem.words(3).join(' '),
+  body: FFaker::Lorem.words(40).join(' '),
+  created_at: FFaker::Time.date,
+  updated_at: '',
+  user_id: rand(1..2),
+  city_id: 12
+)
+end
