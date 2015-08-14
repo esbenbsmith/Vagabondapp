@@ -11,9 +11,9 @@ City.create(name: 'Sydney', state: 'NSW', country: 'Australia', lat: '-33.917410
 City.create(name: 'Ho Chi Minh City', state: '', country: 'Vietnam', lat: '10.818463', long: '106.658825', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/hochiminhcity.jpg')
 City.create(name: 'Seoul', state: '', country: 'South Korea', lat: '37.566535', long: '126.977969', img_url: 'https://s3-us-west-1.amazonaws.com/vacationbond/seoul.jpg')
 
-# User.create(name: 'Alesben Esbenanda', email: 'alesben@gmail.com', password: 'password', password_confirmation: 'password', created_at: '2015-08-13 00:30:40.053344', updated_at: '', city_id: 1)
+User.create(name: 'Alesben Esbenanda', email: 'alesben@gmail.com', password: 'password', password_confirmation: 'password', created_at: '2015-08-13 00:30:40.053344', updated_at: '', city_id: 1, avatar_file_name: 'Boo-the-dog-Hungry-150x150.jpg', avatar_content_type: 'image/jpeg', avatar_file_size: 6236, avatar_updated_at: '2015-08-14 00:42:37')
 
-# User.create(name: 'John Smith', email: 'john@gmail.com', password: 'password', password_confirmation: 'password', created_at: '2015-08-13 00:30:40.053344', updated_at: '', city_id: 2)
+User.create(name: 'John Smith', email: 'john@gmail.com', password: 'password', password_confirmation: 'password', created_at: '2015-08-13 00:30:40.053344', updated_at: '', city_id: 2, avatar_file_name: 'Clean-dog-150x150.jpg', avatar_content_type: 'image/jpeg', avatar_file_size: 6147, avatar_updated_at: '2015-08-14 00:42:37')
 
 # 5.times do
 #   Post.create(
